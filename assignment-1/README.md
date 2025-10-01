@@ -11,7 +11,7 @@ ParkTimer is an activity-specific timer designed to help users analyze the compl
 - Standard timer and feedback mechanisms
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/mutaician/Generaative-AI---OUK.git`
+1. Clone the repository: `git clone https://github.com/mutaician/Gen-AI-ouk.git`
 2. Ensure `uv` is installed (refer to [uv documentation](https://github.com/astral-sh/uv))
 3. Navigate to the project directory: `cd Gen-AI-ouk/assignment-1`
 4. Install dependencies: `uv sync`
