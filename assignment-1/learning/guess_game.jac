@@ -1,0 +1,32 @@
+import random;
+import from byllm.llm { Model }
+
+glob llm = Model(model_name="gemini/gemini-2.5-flash-lite", verbose=False);
+
+def give_hint(guess: int, correct_number: int) -> str by llm();
+
+walker GuessGame {
+    has guess: int;
+
+    can start with `root entry;
+    can process_guess with turn entry;
+}
+
+node turn {
+    has correct_number: int = random.randint(1, 10);
+}
+
+with entry:__main__ {
+    # GuessGame() spawn root;
+    root spawn GuessGame(3);
+    root spawn GuessGame(4);
+    root spawn GuessGame(5);
+    root spawn GuessGame(6);
+}
+
+
+# declaring fields with `has` keyword with object definition
+# separating implementation with `impl` - basically creating a .impl.jac file with impl
+
+# Jac's object-spatial architecture, something lika a graph
+# chain of `turn` nodes created with ++>, move with `visit [-->]` and stop via `disengage`, launched via `spawn` at root

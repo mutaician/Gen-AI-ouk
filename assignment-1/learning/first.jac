@@ -3,6 +3,6 @@ def lovejac() -> str {
 }
 
 with entry:__main__ {
-    print(f"{lovejac()}");
+    print("\n");
     
 }

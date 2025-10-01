@@ -1,0 +1,12 @@
+digraph {
+node [style="filled", shape="ellipse", fillcolor="invis", fontcolor="black"];
+0 -> 1  [label=""];
+1 -> 2  [label=""];
+2 -> 3  [label=""];
+3 -> 4  [label=""];
+0 [label="Root()"fillcolor="#FFE9E9"];
+1 [label="turn(correct_number=6)"fillcolor="#F0FFF0"];
+2 [label="turn(correct_number=6)"fillcolor="#F5E5FF"];
+3 [label="turn(correct_number=6)"fillcolor="#FFFFE0"];
+4 [label="turn(correct_number=6)"fillcolor="#D2FEFF"];
+}
