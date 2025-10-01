@@ -4,6 +4,8 @@
 
 ParkTimer is an activity-specific timer designed to help users analyze the completion of work within allocated time, fostering a sense of urgency to complete tasks in the shortest possible duration.
 
+![ParkTimer TUI](tui.png)
+
 ## Features
 - Activity-specific timing for focused work sessions
 - Analysis of work completion within set time limits
