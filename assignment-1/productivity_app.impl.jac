@@ -1,4 +1,6 @@
 import time;
+import os;
+import sys;
 import from timer_utils { display_timer, play_completion_sound, stop_completion_sound }
 import from session_logger { log_session_to_csv }
 import from rich.console { Console }
@@ -8,6 +10,16 @@ import from rich.text { Text }
 glob console = Console();
 
 impl ProductivitySession.start_session {
+    # Check for API key first
+    if not os.getenv("GOOGLE_API_KEY") {
+        console.print("\n[bold red]ERROR:[/bold red] Missing GOOGLE_API_KEY environment variable!");
+        console.print("ParkTimer requires a Google API key to generate AI feedback.\n");
+        console.print("[yellow]Please set your API key:[/yellow]");
+        console.print("  [cyan]export GOOGLE_API_KEY='your-api-key-here'[/cyan]");
+        console.print("\nOr add it to your .env file.");
+        sys.exit(1);
+    }
+    
     # Header with branding
     title = Text("ParkTimer", style="bold magenta");
     subtitle = Text("Beat Parkinson's Law - Work expands, but your time doesn't", style="italic cyan");
